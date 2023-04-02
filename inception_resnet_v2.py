@@ -58,9 +58,6 @@ def inception_resnet_v2(initializer_A, initializer_B, nbr_classes):
         x4 = Concatenate()([x1, x2, x3])
         x4 = Conv2DBN(x4, backend.int_shape(x)[-1], (1, 1), strides=1, padding='same', initializer=initializer_A, activation=False)
 
-        # x5 = Lambda(lambda inputs: inputs[0] + inputs[1] * 0.1,
-        #     output_shape=backend.int_shape(x)[1:])([x, x4])
-
         x5 = Add()([x, x4 * 0.1])
 
         output = Activation('relu')(x5)
@@ -77,9 +74,6 @@ def inception_resnet_v2(initializer_A, initializer_B, nbr_classes):
         
         x3 = Concatenate()([x1, x2])
         x3 = Conv2DBN(x3, backend.int_shape(x)[-1], (1, 1), strides=1, padding='same', initializer=initializer_A, activation=False)
-
-        # x4 = Lambda(lambda inputs: inputs[0] + inputs[1] * 0.1,
-        #     output_shape=backend.int_shape(x)[1:])([x, x3])
 
         x4 = Add()([x, x3 * 0.1])
 
@@ -100,8 +94,6 @@ def inception_resnet_v2(initializer_A, initializer_B, nbr_classes):
 
         x4 = Lambda(lambda inputs: inputs[0] + inputs[1] * 0.1,
             output_shape=backend.int_shape(x)[1:])([x, x3])
-
-        # x4 = Add()([x, x3 * 0.1])
 
         output = Activation('relu')(x4)
 
