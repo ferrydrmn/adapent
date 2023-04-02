@@ -145,7 +145,7 @@ if __name__ == '__main__':
                             verbose=1
                         )
 
-                        with tf.device('/CPU:0'):
+                        with tf.device('/GPU:0'):
                         
                             model = inception_resnet_v2(initializer_A[1], initializer_B[1], nbr_classes)
 
