@@ -6,5 +6,5 @@ Data citra telah diedit menggunakan Adobe Photoshop CC 2019 untuk mengganti kert
 yang ada pada citra, seperti bayangan pemotret dan objek selain daun teh.
 
 Adapent (Aplikasi Diagnosis Penyakit pada Daun Teh) adalah aplikasi berbasis Android yang dibuat untuk membantu pengguna dalam mendiagnosis penyakit pada daun teh.
-Aplikasi menerima data masukan berupa citra daun teh dengan background kertas berwar
+Aplikasi menerima data masukan berupa citra daun teh dengan background kertas berwarna putih.
 Model diagnosis dibuat dengan menggunakan model convolutional neural network (CNN) arsitektur Inception-ResNet V2.
