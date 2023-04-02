@@ -1,0 +1,8 @@
+0 - healthy
+1 - algal leaf
+2 - anthracnose
+3 - bird eye spot
+4 - brown blight
+5 - gray light
+6 - red leaf spot
+7 - white spot
